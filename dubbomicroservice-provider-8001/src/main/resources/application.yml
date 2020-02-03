@@ -1,0 +1,24 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: dubbomicroservice-provider-8001
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dubbo01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+mybatis:
+  mapper-locations: classpath:Mapper/*Mapper.xml
+  type-aliases-package: com.zyx.dubbo.model
+dubbo:
+  application:
+    name: dubbomicroservice-provider-8001
+  registry:     #ע���������ã�������������ע�����������Ϣ
+    address: zookeeper://127.0.0.1:2181
+  protocol:     #指定使用的协议
+    name: dubbo
+    port: 20880
+#  scan:         #ɨ���
+#    base-packages: com.zyx.dubbo.service.Impl
+
