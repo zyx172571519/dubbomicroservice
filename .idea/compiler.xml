@@ -13,5 +13,8 @@
         <module name="dubbomicroservice-provider-8003" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kafkademo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
